@@ -1,0 +1,82 @@
+<html>
+<head>
+<title>stories.consult_dictionary.LookupADefinition</title>
+<style type="text/css" media="all">
+@import url( "./style/jbehave-core.css" );
+</style>
+</head>
+<body>
+<div class="story">
+<h1>Lookup a definition</h1>
+<div class="path">stories/consult_dictionary/LookupADefinition.story</div>
+<div class="narrative"><h2>Narrative:</h2>
+<div class="element inOrderTo"><span class="keyword inOrderTo">In order to</span> make me feel **a sense of accomplishment**</div>
+<div class="element asA"><span class="keyword asA">As a</span> forgetful person</div>
+<div class="element iWantTo"><span class="keyword iWantTo">I want to</span> be to _view all of things I have completed_s</div>
+</div>
+<div class="scenario">
+<h2>Scenario: Looking up the definition of 'apple'</h2>
+<div class="step successful">Given that <span class="step parameter">Jane</span> has a todo list containing <span class="step parameter">Buy some milk, Walk the dog</span></div>
+<div class="step successful">And has completed the task called 'Walk the dog'</div>
+<div class="step successful">When filters her list to show only <span class="step parameter">Completed</span> tasks</div>
+<div class="step successful">Then todo list should contain <span class="step parameter">Walk the dog</span></div>
+</div>
+<div class="scenario">
+<h2>Scenario: Looking up the definition of 'pear'</h2>
+<div class="examples">
+<h3>Examples:</h3>
+<div class="step">Given that Jane has a todo list containing &lt;tasks&gt;</div>
+<div class="step">And has completed the task called 'Walk the dog'</div>
+<div class="step">When filters her list to show only &lt;filter&gt; tasks</div>
+<div class="step">Then todo list should contain &lt;expected&gt;</div>
+<table>
+<thead>
+<tr>
+<th>tasks</th><th>filter</th><th>expected</th></tr>
+</thead>
+<tbody>
+<tr>
+<td>Buy some milk, Walk the dog</td><td>Active</td><td>Buy some milk</td></tr>
+<tr>
+<td>Buy some milk, Walk the dog</td><td>Completed</td><td>Walk the dog</td></tr>
+</tbody>
+</table>
+
+<h3 class="example">Example: {tasks=Buy some milk, Walk the dog, filter=Active, expected=Buy some milk}</h3>
+<div class="step successful">Given that <span class="step parameter">Jane</span> has a todo list containing <span class="step parameter">Buy some milk, Walk the dog</span></div>
+<div class="step successful">And has completed the task called 'Walk the dog'</div>
+<div class="step successful">When filters her list to show only <span class="step parameter">Active</span> tasks</div>
+<div class="step successful">Then todo list should contain <span class="step parameter">Buy some milk</span></div>
+
+<h3 class="example">Example: {tasks=Buy some milk, Walk the dog, filter=Completed, expected=Walk the dog}</h3>
+<div class="step successful">Given that <span class="step parameter">Jane</span> has a todo list containing <span class="step parameter">Buy some milk, Walk the dog</span></div>
+<div class="step successful">And has completed the task called 'Walk the dog'</div>
+<div class="step successful">When filters her list to show only <span class="step parameter">Completed</span> tasks</div>
+<div class="step successful">Then todo list should contain <span class="step parameter">Walk the dog</span></div>
+</div>
+</div>
+</div>
+
+</body>
+<!--  SyntaxHighlighter resources:  should be included at end of body -->
+<link rel="stylesheet" type="text/css" href="./style/sh-3.0.83/shCore.css"/>
+<link rel="stylesheet" type="text/css" href="./style/sh-3.0.83/shThemeRDark.css"/>
+<script language="javascript" src="./js/sh-3.0.83/shCore.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushBash.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushCss.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushDiff.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushGroovy.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushJava.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushJScript.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushPlain.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushPython.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushRuby.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushScala.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushXml.js"></script>
+<script language="javascript" src="./js/shBrushBdd.js"></script>
+<script type="text/javascript">
+    SyntaxHighlighter.defaults['gutter'] = false;
+    SyntaxHighlighter.defaults['toolbar'] = false;    
+    SyntaxHighlighter.all();
+</script>
+</html>
